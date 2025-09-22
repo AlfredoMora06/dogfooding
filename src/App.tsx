@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import './App.css';
 
-function Layout({ children }: { children: React.ReactNode }) {
+function Layout({ children }: { children: React.ReactNode }) {  
   return (
     <>
       <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc' }}>
