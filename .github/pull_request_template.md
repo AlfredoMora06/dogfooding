@@ -3,10 +3,6 @@
   Comments will not appear in the output on GitHub. 🥷
 -->
 
-## Ticket Link 📇
-
-[❗Replace this text with the Linear Card title❗](#url-goes-here)
-
 ## Description 📝
 
 <!--
