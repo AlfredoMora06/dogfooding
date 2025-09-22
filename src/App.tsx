@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import './App.css';
+import FoodInput from './components/FoodInput';
 
-function Layout({ children }: { children: React.ReactNode }) {  
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc' }}>
@@ -17,7 +18,12 @@ function Layout({ children }: { children: React.ReactNode }) {
 }
 
 function Home() {
-  return <h1>Welcome to the Home Page</h1>;
+  return (
+    <div>
+      <h1>Can My Dog Eat This?</h1>
+      <FoodInput />
+    </div>
+  );
 }
 
 function About() {
