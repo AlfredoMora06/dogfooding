@@ -1,0 +1,32 @@
+[
+  {
+    "name": "grapes",
+    "status": "unsafe",
+    "reason": "Toxic to dogs and can cause kidney failure."
+  },
+  {
+    "name": "chocolate",
+    "status": "unsafe",
+    "reason": "Contains theobromine, which is toxic to dogs."
+  },
+  {
+    "name": "carrots",
+    "status": "safe",
+    "reason": "A healthy snack for dogs in moderation."
+  },
+  {
+    "name": "chicken",
+    "status": "safe",
+    "reason": "Cooked chicken is a good source of protein for dogs."
+  },
+  {
+    "name": "onions",
+    "status": "unsafe",
+    "reason": "Can cause anemia in dogs by damaging red blood cells."
+  },
+  {
+    "name": "avocado",
+    "status": "caution",
+    "reason": "Contains persin, which can be harmful in large amounts."
+  }
+]
