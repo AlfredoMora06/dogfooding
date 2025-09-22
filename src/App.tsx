@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc' }}>
+        <Link to="/" style={{ marginRight: '1rem' }}>Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+      <main style={{ padding: '1rem' }}>{children}</main>
     </>
-  )
+  );
 }
 
-export default App
+function Home() {
+  return <h1>Welcome to the Home Page</h1>;
+}
+
+function About() {
+  return <h1>About / Info Page</h1>;
+}
+
+function App() {
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+}
+
+export default App;
